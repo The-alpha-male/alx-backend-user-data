@@ -8,9 +8,10 @@ from sqlalchemy.ext.declarative import declarative_base
 # Create base class
 Base = declarative_base()
 
+
 class User(Base):
     """Class attributes for users"""
-    
+
     __tablename__ = 'users'
     id = Column(Integer, primary_key=True)
     email = Column(String(250), nullable=False)
