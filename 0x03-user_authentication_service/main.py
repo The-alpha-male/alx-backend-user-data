@@ -6,7 +6,7 @@ from user import User
 from db import DB
 from sqlalchemy.exc import InvalidRequestError
 from sqlalchemy.orm.exc import NoResultFound
-from auth import hash_password
+from auth import _hash_password
 
 print(User.__tablename__)
 
