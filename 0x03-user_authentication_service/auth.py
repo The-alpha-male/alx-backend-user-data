@@ -4,6 +4,7 @@ takes in a password string arguments and returns bytes."""
 
 import bcrypt
 
+
 def _hash_password(password: str) -> str:
     """Hash a password
     """
