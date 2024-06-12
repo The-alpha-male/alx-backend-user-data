@@ -3,10 +3,10 @@
 takes in a password string arguments and returns bytes."""
 
 import bcrypt
+import uuid
 from db import DB
 from sqlalchemy.orm.exc import NoResultFound
 from user import User
-from uuid import uuid4
 
 
 def _hash_password(password: str) -> str:
@@ -38,5 +38,4 @@ class Auth:
 
     def _generate_uuid() -> str:
         """Generate a UUID"""
-        UUID = str(uuid.uuid4())
-        return UUID
+        return str(uuid.uuid4())
