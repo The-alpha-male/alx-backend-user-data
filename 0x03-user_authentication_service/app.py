@@ -97,9 +97,11 @@ def update_password() -> str:
 
 @app.route('/profile', methods=['GET'], strict_slashes=False)
 def profile() -> str:
+    """request should contain a cookie named session_id
+    """
     session_id = request.cookies.get('session_id')
     user = AUTH.get_user_from_session_id(session_id)
-    if user:
+    if user and session_id:
         return jsonify({"email": user.email}), 200
     else:
         abort(403)
